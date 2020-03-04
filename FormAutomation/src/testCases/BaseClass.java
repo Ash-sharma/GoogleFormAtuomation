@@ -15,10 +15,19 @@ public class BaseClass {
 	public String baseURL = "https://docs.google.com/forms/d/e/1FAIpQLSdOAFfCsdXsQCOiqejWcxHoPlopDjsA4TDmXTRbSQ__pM2xvQ/viewform";
 	public static WebDriver driver;
 	
+//	String os = System.getProperty("os.name").toLowerCase();
+	
 	@BeforeClass
 	public void setup()
 	{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +"/Drivers/chromedriver");
+//		if(os.contains("mac")) {
+//			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +"/Drivers/chromedriver");
+//		}
+//		else {
+//			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +"/Drivers/chromedriver.exe");
+//		}
+			
 		driver = new ChromeDriver();
 		
 		driver.get(baseURL);
