@@ -18,15 +18,15 @@ public class FillFormTest extends BaseClass {
 		int rownum = XLUtil.getRowCount(path,"Sheet1");
 		int colcount = XLUtil.getCellCount(path, "Sheet1", 1);
 		
-		String logindata[][] = new String[rownum][colcount];
+		String inputData[][] = new String[rownum][colcount];
 		for(int i=1;i<=rownum;i++)
 		{
 			for(int j=0;j<colcount;j++)
 			{
-				logindata[i-1][j]=XLUtil.getCellData(path,"Sheet1", i,j);
+				inputData[i-1][j]=XLUtil.getCellData(path,"Sheet1", i,j);
 			}
 		}
-	return logindata;
+	return inputData;
 	}
 	
 	

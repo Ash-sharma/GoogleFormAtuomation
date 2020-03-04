@@ -5,7 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 
 
@@ -17,7 +19,7 @@ public class BaseClass {
 	
 	String os = System.getProperty("os.name").toLowerCase();
 	
-	@BeforeClass
+	@BeforeMethod
 	public void setup()
 	{
 		if(os.contains("mac")) {
@@ -34,7 +36,7 @@ public class BaseClass {
 
 	}
 	
-	@AfterClass 
+	@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();
